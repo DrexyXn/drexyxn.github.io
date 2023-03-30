@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/impact" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>SupreX</title>
+</head>
+<body>
+    <header>
+        <h2><a href="index.html">&lt;/S<span class="colortext">upre</span>X&gt;</a></h2>
+        <input type="checkbox" id="check_menu" onclick="MenuChange()">
+        <label for="check_menu"><img id="menuButton" src="images/Open.svg"></label>
+
+        <div class="menu">
+            <a href="#About-me">About Me</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Pet-Projects">Pet-Projects</a>
+            <a href="#Contacts">Contacts</a>
+        </div>
+    </header>
+
+    <div class="welcome">
+        <div class="hi-content hidden">
+            <h2>Roman Suprun</h2>
+            <h3>Frontend Developer</h3>
+            <h4>Frontend developer looking for ideas and projects for himself and others</h4>
+        </div>
+
+        <div class="illustrations">
+            <div class="illustrations-swipe">
+                <div class="swiper mySwiper">
+                    <img src="images/figures.svg">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/person-1.svg"></div>
+                        <div class="swiper-slide"><img src="images/person-2.svg"></div>
+                        <div class="swiper-slide"><img src="images/person-3.svg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="js-text-gradient"></div>
+            <div class="js-text">
+                <pre>
+let button_menu = document.querySelector(".header_button");
+let float_menu  = document.querySelector(".header_menu--float");
+let line_top   = document.querySelector(".header_button_line--top");
+let line_under = document.querySelector(".header_button_line--bot");
+button_menu.isSelected = false;
+function addEffectWriting(element, time) {
+  let element_array = element.innerText.split("");
+  element.count = 0;
+  element.innerText = "";
+  function writeSymbols() {
+    element.innerText += element_array[element.count];
+    element.count++;
+    if (element.count <= element_array.length) {
+      setTimeout(() => {
+        writeSymbols();
+      }, time);
+    } else if (element.count >= element_array.length) {
+      element.count     = 0;
+      element.innerText = "";
+      writeSymbols();
+    }
+  }
+  writeSymbols();
+}
+
+editor.addEventListener("paste", function(e) {
+    // cancel paste
+    e.preventDefault();
+    // get text representation of clipboard
+    var text = (e.originalEvent || e).clipboardData.getData('text/plain');
+    // insert text manually
+    document.execCommand("insertHTML", false, text);
+});
+
+const ClipboardActionCopy = (
+  target,
+  options = { container: document.body }
+) => {
+  let selectedText = '';
+  if (typeof target === 'string') {
+    selectedText = fakeCopyAction(target, options);
+  } else if (
+    target instanceof HTMLInputElement &&
+    !['text', 'search', 'url', 'tel', 'password'].includes(target?.type)
+  ) {
+    selectedText = fakeCopyAction(target.value, options);
+  } else {
+    selectedText = select(target);
+    command('copy');
+  }
+  return selectedText;
+};
+export default ClipboardActionCopy;
+
+function sum$cata(fs) {
+    var tags = this.constructor[TAGS];
+    var tag;
+    for (var idx = 0; idx < tags.length; idx += 1) {
+      tag = tags[idx];
+      if (!fs[tag]) {
+        throw new TypeError (
+          "Constructors given to cata didn't include: " + tag
+        );
+      }
+    }
+    return fs[this[TAG]].apply (fs, this[VALUES]);
+}
+
+function sum$ctrToString() {
+    return this[RET_TYPE] + '.' + this[TAG];
+}
+
+  function sum$toString() {
+    return this.constructor[TYPE] + '.' +
+           this[TAG] + arrToString (this[VALUES]);
+}
+function makeConstructorFromObject(fields, proto) {
+    return function(obj) {
+      var values = [];
+      for (var idx = 0; idx < fields.length; idx += 1) {
+        var field = fields[idx];
+        if (!(Object.prototype.hasOwnProperty.call (obj, field))) {
+          throw new TypeError ('Missing field: ' + field);
+        }
+        values.push (obj[field]);
+      }
+      return makeValue (fields, proto, values, values.length);
+    };
+}
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="about_me" id="About-me">
+        <div class="logo">
+            <img src="images/logo.svg" height="90">
+        </div>
+        <p class="hidden">A few years ago, I became interested in developing websites and interfaces. Since then, I have been steadily improving my skills. Now I am developing websites and web applications to order or for myself.</p>
+    </div>
+
+    <div class="skills" id="Skills">
+        <h3>My skills</h3>
+        <div class="skill_line" id="skills_container">
+            <div class="card-skill-html hidden" id="problemo1">
+                <div class="card-skill-html-content">
+                    <img src="images/icon_html.svg">
+                    <img src="images/icon_html--hover.svg">
+                    <list>HTML5</list>
+                </div>
+            </div>
+            <div class="card-skill-css hidden" id="problemo2">
+                <div class="card-skill-css-content">
+                    <img src="images/icon_css.svg">
+                    <img src="images/icon_css--hover.svg">
+                    <list>CSS3</list>
+                </div>
+            </div>
+            <div class="card-skill-js hidden" id="problemo3">
+                <div class="card-skill-js-content">
+                    <img src="images/icon_js.svg">
+                    <img src="images/icon_js--hover.svg">
+                    <list>JavaScript</list>
+                </div>
+            </div>
+            <div class="card-skill-scss hidden" id="problemo4">
+                <div class="card-skill-scss-content">
+                    <img src="images/icon_scss.svg">
+                    <img src="images/icon_scss--hover.svg">
+                    <list>SCSS</list>
+                </div>
+            </div>
+            <div class="card-skill-git hidden" id="problemo5">
+                <div class="card-skill-git-content">
+                    <img src="images/icon_git.svg">
+                    <img src="images/icon_git--hover.svg">
+                    <list>Git</list>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio" id="Pet-Projects">
+        <h2>My Works</h2>
+        <div class="grid_portfolio">
+            <div class="card-portfolio-1">
+                <div class="card-portfolio-1-description">
+                    <h3>Outdoor Activities</h3>
+                    <h4>Scroll animated website</h4>
+                    <img src="images/Line_1.svg">
+                    <p>Discover how you can combine recreation with sport. <br>Practice is vacation for us.</p>
+                    <div class="see_more_1"><a href="Outdoors/index.html" target="_blank">See more →</a></div>  
+                </div>
+                <div class="preview-layout-1"></div>
+            </div>
+
+            <div class="card-portfolio-2">
+                <div class="card-portfolio-2-description">
+                    <h3>Login & Register</h3>
+                    <h4>HTML, CSS, JS</h4>
+                    <img src="images/Line_1.svg">
+                    <p>Transparent Website <br> with Login and Registration Form. Check out my page.</p>
+                    <div class="see_more_2"><a href="Login-Menu/index.html" target="_blank">See more →</a></div>
+                </div>
+                <div class="preview-layout-2"></div>
+            </div>
+
+            <div class="card-portfolio-3">
+                <div class="card-portfolio-3-description">
+                    <h3>Business Website</h3>
+                    <h4>HTML, SCSS, JS</h4>
+                    <img src="images/Line_1.svg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="see_more_3"><a href="MyProject.html" target="_blank">See more →</a></div>
+                </div>
+                <div class="preview-layout-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="Contacts">
+        <div class="footer_text">
+            <h2>&lt;/S<span class="colortext">upre</span>X&gt;</h2>
+            <h3>If you liked my work and you need me, I'm ready to talk to you.</h3>
+        </div>
+        <div class="footer_contacts">
+            <h2>Contacts</h2>
+            <address>
+                <div class="social_media_1">
+                    <div class="vk">
+                        <img src="images/contact_vk.svg">
+                        <a href="https://vk.com/RomanSuprun" target="_blank">@Roman Suprun</a>
+                    </div>
+                    <div class="mail">
+                        <img src="images/contact_mail.svg">
+                        <a href="mailto:froair@list.ru" target="_blank">SupreX@mail.com</a>
+                    </div>
+                </div>
+                <div class="social_media_2">
+                    <div class="github">
+                        <img src="images/contact_github.svg">
+                        <a href="https://github.com/DrexyXn" target="_blank">DrexyXn</a>
+                    </div>
+                    <div class="figma">
+                        <img src="images/contact_figma.svg">
+                        <a href="https://www.figma.com/@Drexy" target="_blank">Drexy</a>
+                    </div>
+                </div>
+            </address>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
