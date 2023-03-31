@@ -56,9 +56,9 @@ table {
 
 /* End reset styles */
 @font-face {
+  font-family: 'Anton', sans-serif;
   font-family: 'Inconsolata', monospace;
-  src: url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
-  src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+  src: url("https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@300&display=swap");
   font-display: swap;
 }
 
@@ -103,7 +103,7 @@ header a:hover {
 
 header h2 {
   width: 40%;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Anton', sans-serif;
   font-size: 3.2rem;
   text-align: center;
   color: #FF8303;
@@ -524,7 +524,7 @@ footer {
 }
 
 .footer_text h2 {
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Anton', sans-serif;
   font-size: 3.5rem;
   text-align: center;
   color: #FF8303;
@@ -548,7 +548,7 @@ footer {
 }
 
 .footer_contacts h2 {
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Anton', sans-serif;
   font-size: 3rem;
   color: #FF8303;
 }
